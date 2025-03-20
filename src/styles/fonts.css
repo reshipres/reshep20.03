@@ -1,0 +1,39 @@
+/* Подключение шрифтов Century Gothic и альтернативы */
+@font-face {
+  font-family: 'Century Gothic';
+  src: url('./fonts/CenturyGothic.woff2') format('woff2'),
+       url('./fonts/CenturyGothic.woff') format('woff'),
+       local('Century Gothic'),
+       local('CenturyGothic');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Century Gothic';
+  src: url('./fonts/CenturyGothicBold.woff2') format('woff2'),
+       url('./fonts/CenturyGothicBold.woff') format('woff'),
+       local('Century Gothic Bold'),
+       local('CenturyGothicBold');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Переменная для использования шрифта с запасными вариантами */
+:root {
+  --century-gothic: 'Century Gothic', 'Futura', 'Montserrat', 'Segoe UI', 'Arial', sans-serif;
+}
+
+/* Класс для текста с Century Gothic Bold */
+.font-century-bold {
+  font-family: var(--century-gothic);
+  font-weight: 700;
+}
+
+/* Класс для текста с Century Gothic Regular */
+.font-century {
+  font-family: var(--century-gothic);
+  font-weight: 400;
+}
